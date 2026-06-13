@@ -61,7 +61,7 @@ const runDailyROI = async () => {
 };
 
 const startCronJob = () => {
-  cron.schedule("05 00 * * *", () => {
+  cron.schedule("00 00 * * *", () => {
     runDailyROI();
   });
   console.log("Cron Job Scheduled: Daily ROI process will run at midnight.");
